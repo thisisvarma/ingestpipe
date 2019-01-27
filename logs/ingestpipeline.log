@@ -1,0 +1,12 @@
+
+2019-01-26 18:06:13,239 - root - INFO - this is ingest application
+2019-01-26 18:06:13,243 - root - DEBUG - connection is established with database
+2019-01-26 18:06:13,243 - root - DEBUG - cursor is at : 
+2019-01-26 18:06:13,244 - root - DEBUG - returning fetch data
+2019-01-26 18:06:13,244 - root - DEBUG - closing database connection
+2019-01-26 18:08:22,830 - root - INFO - this is ingest application
+2019-01-26 18:08:22,830 - root - INFO - calling database connection function
+2019-01-26 18:08:22,834 - root - DEBUG - connection is established with database
+2019-01-26 18:08:22,834 - root - DEBUG - returning fetch data
+2019-01-26 18:08:22,835 - root - DEBUG - closing database connection
+2019-01-26 18:08:22,835 - root - INFO - printing output to the screen
