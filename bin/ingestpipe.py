@@ -23,31 +23,42 @@ def db_connection(query):
 
     try:
         #logging.DEBUG("connecting to DataBase server")
-        connection = pymssql.connect(host='localhost',\
-                                     user='sa',\
-                                     password='HelloWorld1@3'\
+        connection = pymssql.connect(host='localhost',
+                                     user='sa',
+                                     password='HelloWorld1@3'
                                      )
         logging.debug("connection is established with database")
         cursor = connection.cursor()
-        cursor.execute(query)
+        cursor.execute(qudfdfery)
         logging.debug("returning fetch data")
         return cursor.fetchall()
+    # except NameError as f:
+    #     logging.error ("name error is raised : {} ".format(f))
+    # except TypeError as e:
+    #     logging.error("there is some problem with database connection, error is : {} ".format(e))
     except Exception as e:
-        logging.error("there is some problem with database connection, error is : ", e)
-    finally:
-        connection.close()
-        logging.debug("closing database connection")
+        logging.error("there is some problem with database connection, error is : {} ".format(str(e)))
+
+
+    # finally:
+    #     connection.close()
+    #     logging.debug("closing database connection")
 
 logging.info("this is ingest application")
+
 if __name__ == '__main__':
+
     try:
-        logging.info("calling database connection function")
+
+        logging.debug("trying to connect to DB server")
         data = db_connection(query)
-        logging.info("printing output to the screen")
-        print(data)
+        logging.debug("returned output value is {} ".format(data))
 
     except Exception as e:
-        logging.info("there is some problem with connection, Error is : ", e)
+        logging.error("Error is : {} ".format(e))
+
+
+
 
 
 
